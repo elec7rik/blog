@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // Avoid hydration mismatch
@@ -16,7 +16,8 @@ export function ModeToggle() {
 
   if (!mounted) return null;
 
-  const isDark = theme === "dark";
+  // const isDark = theme === "dark";
+  const isDark = resolvedTheme === "dark";
 
   return (
     <Button
@@ -25,11 +26,7 @@ export function ModeToggle() {
       aria-label="Toggle theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
-      {isDark ? (
-        <Sun className="h-5 w-5" />
-      ) : (
-        <Moon className="h-5 w-5" />
-      )}
+      {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </Button>
   );
 }
