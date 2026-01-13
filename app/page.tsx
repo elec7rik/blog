@@ -1,5 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default function Home() {
-  return (
-    <p>nextjs project initialized with shadcn</p>
-  );
+  return redirect("/blog");
 }
