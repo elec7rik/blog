@@ -4,6 +4,8 @@ Always wanted to create a blog for myself and I just did it!
 
 Built with **Next.js (App Router)**, **Supabase**, and **shadcn**.
 
+I prototyped this inside the [chill-lab/my-blog](https://github.com/elec7rik/chill-lab/tree/main/my-blog) repo while iterating fast, then extracted and cleaned it into a standalone project.
+
 
 ### Features
 
